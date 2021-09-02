@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Spartan:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css">
+  <link id="theme" rel="stylesheet" href="./css/theme1.css">
+  <title>Frontend Mentor | Calculator app</title>
+
+</head>
+<body>
+
+  <div class="calculator">
+
+    <!-- logo -->
+    <header class="heading">
+      <h3 class="heading__logo">calc</h3>
+
+    <!-- theme switch -->
+      <div class="heading__switches">
+        <p>THEME</p>
+        <div class="switches__sliderbar">
+          <label for="theme-1" class="slicebar_input1"></label>
+          <input id="theme-1" type="radio" name="theme" value="1" onclick="handleThemeChange(this.value)" checked>
+          <label for="theme-2" class="slicebar_input2"></label>
+          <input id="theme-2" type="radio" name="theme" value="2" onclick="handleThemeChange(this.value)">
+          <label for="theme-3" class="slicebar_input3"></label>
+          <input id="theme-3" type="radio" name="theme" value="3" onclick="handleThemeChange(this.value)">
+          <span class="slider"></span>
+        </div>
+      </div>    
+    </header>
+
+    <!-- calculator display -->
+    <div class="display">
+      <p id="output"></p>
+    </div>
+
+    <!-- calculator button -->
+    <div class="wrap__btn">
+      <button data-number>7</button>
+      <button data-number>8</button>
+      <button data-number>9</button>
+      <button data-delete>DEL</button>
+      <button data-number>4</button>
+      <button data-number>5</button>
+      <button data-number>6</button>
+      <button data-operator>+</button>
+      <button data-number>1</button>
+      <button data-number>2</button>
+      <button data-number>3</button>
+      <button data-operator>-</button>
+      <button data-number>.</button>
+      <button data-number>0</button>
+      <button data-operator>/</button>
+      <button data-operator>x</button>
+      <button data-reset>RESET</button>
+      <button data-equal>=</button>
+    </div>
+
+  </div>
+
+  <script src="../src/script.js"></script>
+</body>
+</html>

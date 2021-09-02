@@ -1,0 +1,189 @@
+/* global */
+
+*, *::after, *::before{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Spartan', sans-serif;
+}
+
+/* logo and slider */
+
+.heading {
+    width: 90%;
+    max-width: 40.625rem;
+    margin: 1.438rem auto 1.438rem auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.heading__logo {
+    font-size: 2rem;
+}
+
+.heading__switches{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    height: 2.875rem;
+    width: 9.125rem;
+}
+
+.heading__switches p {
+    font-size: 0.875rem;
+}
+
+.switches__sliderbar {
+    width: 4.563rem;
+    height: 1.75rem;
+    border-radius: 0.875rem;
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.switches__sliderbar input[type="radio"] {
+    width: 1.438rem;
+    height: 1.75rem;
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    cursor: pointer;
+}
+
+.switches__sliderbar .slicebar_input1::before {
+    content: "1";
+    position: absolute;
+    top: -1rem;
+    font-size: .75rem;
+    left: 20%;
+}
+.switches__sliderbar .slicebar_input2::before {
+    content: "2";
+    position: absolute;
+    top: -1rem;
+    font-size: .75rem;
+    left: 45%;
+}
+.switches__sliderbar .slicebar_input3::before {
+    content: "3";
+    position: absolute;
+    top: -1rem;
+    font-size: .75rem;
+    left: 75%;
+}
+
+.slider {
+    border-radius: 50%;
+    width: 1rem;
+    height: 1rem;
+    position: absolute;
+    left: 10%;
+    transition: 0.2s;
+}
+
+#theme-1:checked ~ .slider {
+    left: 13%;
+}
+
+#theme-2:checked ~ .slider {
+    left: 40%;
+}
+
+#theme-3:checked ~ .slider {
+    left: 68%;
+}
+
+/* calculator display */
+
+.display {
+    min-height: 6.25rem;
+    margin: 1.438rem auto;
+    width: 90%;
+    max-width: 40.625rem;
+    border-radius: 0.625rem;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.display p {
+    padding: 1.688rem;
+    font-size: 1.875rem;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+/* keypad  */
+
+.wrap__btn {
+    min-height: 460px;
+    width: 90%;
+    max-width: 40.625rem;
+    margin: 1.438rem auto;
+    padding: 1.438rem;
+    border-radius: 0.625rem;
+    display: grid;
+    grid-template: repeat(5, 1fr)/ repeat(4, 1fr);
+    gap: 0.875rem;
+}
+
+.wrap__btn button{
+    font-weight: 700;
+    font-family: 'Spartan', sans-serif;
+    font-size: 1.563rem;
+    border-radius: 10%;
+    outline: none;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+}
+
+.wrap__btn button[data-number]{
+    max-height: 4.125rem;
+}
+
+.wrap__btn button[data-operator]{
+    max-height: 4.125rem;
+}
+
+.wrap__btn button[data-delete]{
+    font-size: 1rem;
+    max-height: 4.125rem;
+}
+
+.wrap__btn button[data-reset]{
+    grid-column-start: span 2;
+    font-size: 1.125rem;
+    max-height: 4.125rem;
+}
+
+.wrap__btn button[data-equal]{
+    grid-column-start: span 2;
+    max-height: 4.125rem;
+}
+
+
+
+/* media query */
+
+@media screen and (min-width: 900px) { 
+    .calculator{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+    }
+}
+
+@media screen and (min-height: 900px){
+    .calculator{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+    }
+}

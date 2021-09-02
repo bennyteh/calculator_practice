@@ -1,0 +1,71 @@
+/* main background */
+body {
+    background-color: hsl(268, 75%, 9%);
+}
+
+/* toggle background */
+
+.heading {
+    color: hsl(52, 100%, 62%);
+}
+
+.switches__sliderbar {
+    background-color: hsl(268, 71%, 12%);
+}
+
+.slider {
+    background-color: hsl(176, 100%, 44%);
+}
+
+/* screen background */
+
+.display {
+    background-color: hsl(268, 71%, 12%);
+}
+
+.display p {
+    color: hsl(52, 100%, 62%);
+}
+
+/* keypad background, key background, key shadow */
+
+.wrap__btn {
+    background-color: hsl(268, 71%, 12%);
+}
+
+.wrap__btn button{
+    color: hsl(52, 100%, 62%);
+}
+
+.wrap__btn button[data-number]{
+    background-color: hsl(268, 47%, 21%);
+    box-shadow: 0 4px hsl(290, 70%, 36%);
+}
+
+.wrap__btn button[data-operator]{
+    background-color: hsl(268, 47%, 21%);
+    box-shadow: 0 4px hsl(290, 70%, 36%);
+}
+
+.wrap__btn button[data-delete]{
+    background-color: hsl(281, 89%, 26%);
+    box-shadow: 0 4px hsl(285, 91%, 52%);
+    color: white;
+}
+
+.wrap__btn button[data-reset]{
+    color: white;
+    background-color: hsl(281, 89%, 26%);
+    box-shadow: 0 4px hsl(285, 91%, 52%);
+}
+
+.wrap__btn button[data-equal]{
+    background-color: hsl(176, 100%, 44%);
+    box-shadow: 0 4px hsl(177, 92%, 70%);
+    color: hsl(198, 20%, 13%);
+}
+
+.wrap__btn button:active{
+    transform: translateY(4px);
+    box-shadow: 0 0px;
+}
