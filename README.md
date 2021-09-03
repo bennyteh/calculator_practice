@@ -19,8 +19,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [https://github.com/bennyteh/calculator_practice](https://your-solution-url.com)
-- Live Site URL: [https://bennyteh.github.io/calculator_practice/](https://your-live-site-url.com)
+- Live Site URL: [https://bennyteh.github.io/calculator_practice/](https://bennyteh.github.io/calculator_practice/)
 
 
 ### Built with
