@@ -26,9 +26,13 @@ class Calculator {
     }
 
     operation(operator){
-        this.operator = operator
+        if (this.displayNumber == "") return
+        if (this.previousNumber !=='') {
+              this.compute()
+        }
         this.previousNumber = this.displayNumber
-        this.displayNumber = ''
+        this.operator = operator
+        this.displayNumber = ""
     }
 
     inputButton(number){
@@ -41,23 +45,27 @@ class Calculator {
     }
 
     compute() {
+        let computation
+        if (isNaN(this.previousNumber) || isNaN(this.displayNumber)) return
         switch(this.operator) {
             case '+':
-                this.displayNumber = parseFloat(this.previousNumber) + parseFloat (this.displayNumber) 
+                computation = parseFloat(this.previousNumber) + parseFloat(this.displayNumber)
                 break;
             case '-':
-                this.displayNumber = parseFloat(this.previousNumber) - parseFloat(this.displayNumber)
+                computation = parseFloat(this.previousNumber) - parseFloat(this.displayNumber)
                 break;
             case 'x':
-                this.displayNumber = parseFloat(this.previousNumber) * parseFloat (this.displayNumber)
+                computation = parseFloat(this.previousNumber) * parseFloat(this.displayNumber)
                 break;
             case '/':
-                this.displayNumber = parseFloat(this.previousNumber) / parseFloat(this.displayNumber)
+                computation = parseFloat(this.previousNumber) / parseFloat(this.displayNumber)
                 break;
             default:
                 return;
-
         }
+        this.displayNumber = computation
+        this.operator = undefined
+        this.previousNumber = ''
     }
     
     toLocaleNumber(number) {
